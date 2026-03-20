@@ -1,0 +1,208 @@
+:root {
+    --color-principal: #fceea7;
+    --color-oscuridad: rgba(0, 0, 0, 0.4);
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    color: var(--color-principal);
+    background-color: #111;
+    overflow: hidden; 
+    touch-action: none; 
+}
+
+.contenedor-presentacion {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.seccion-boda {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, visibility 1.5s ease;
+    z-index: 1;
+}
+
+.seccion-boda.es-activa {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+.capa-fondo {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(1.05);
+    transition: filter 1.5s ease, opacity 1.5s ease, transform 1.5s ease;
+    will-change: transform, opacity, filter;
+}
+
+.seccion-boda.es-activa .capa-fondo {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1);
+}
+
+.capa-oscura {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: transparent;
+    transition: background 1.5s ease;
+    z-index: 1;
+}
+
+.seccion-boda.es-activa .capa-oscura {
+    background: var(--color-oscuridad);
+}
+
+.contenido {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease 0.4s; 
+}
+
+.seccion-boda.es-activa .contenido {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fotos de prueba (Unsplash) - La última sección ahora tiene una nueva foto de amor/boda explícita */
+.seccion-1 .capa-fondo { background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000&auto=format&fit=crop'); }
+.seccion-2 .capa-fondo { background-image: url('https://images.unsplash.com/photo-1543165365-07232ed12fad?q=80&w=1000&auto=format&fit=crop'); }
+.seccion-3 .capa-fondo { background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1000&auto=format&fit=crop'); }
+.seccion-4 .capa-fondo { background-image: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1000&auto=format&fit=crop'); }
+.seccion-5 .capa-fondo { background-image: url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1000&auto=format&fit=crop'); }
+
+.pre-titulo {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Nuevos ajustes de los NOMBRES en 3 líneas de texto muy grandes */
+.nombres {
+    font-family: var(--fuente-titulos);
+    font-size: 5rem; 
+    line-height: 1.1; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    margin: 1rem 0;
+}
+
+.mensaje {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    font-weight: 400;
+}
+
+.titulo-seccion {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.detalles-evento, .items-informacion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.detalle-item, .item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    font-size: 1.1rem;
+}
+
+.detalle-item i, .item-info i {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    color: var(--color-principal);
+}
+
+.boton {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(2px);
+}
+
+.boton:hover {
+    background-color: var(--color-principal);
+    color: #111;
+}
+
+.boton i {
+    margin-right: 8px;
+}
+
+.texto-mapa {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.texto-confirmacion {
+    margin: 2rem 0 1.5rem;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 400px) {
+    .nombres {
+        font-size: 4rem; /* Los nombres grandes en móviles (estaban en 2.8) */
+    }
+    .titulo-seccion {
+        font-size: 1.8rem;
+    }
+    .mensaje {
+        font-size: 0.95rem;
+    }
+}
