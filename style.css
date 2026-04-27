@@ -105,23 +105,23 @@ body {
 
 /* Fotos de fondo locales de la carpeta BG */
 .seccion-1 .capa-fondo {
-    background-image: url('BG/seccion-1.jpg');
+    background-image: url('seccion-1.jpg');
 }
 
 .seccion-2 .capa-fondo {
-    background-image: url('BG/seccion-2.jpg');
+    background-image: url('seccion-2.jpg');
 }
 
 .seccion-3 .capa-fondo {
-    background-image: url('BG/seccion-3.jpg');
+    background-image: url('seccion-3.jpg');
 }
 
 .seccion-4 .capa-fondo {
-    background-image: url('BG/seccion-4.jpg');
+    background-image: url('seccion-4.jpg');
 }
 
 .seccion-5 .capa-fondo {
-    background-image: url('BG/seccion-5.jpg');
+    background-image: url('seccion-5.jpg');
 }
 
 .pre-titulo {
