@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (estaAnimando) return;
 
         let siguienteIndice = indiceActual + direccion;
-        
+
         if (siguienteIndice < 0 || siguienteIndice >= secciones.length) return;
 
         estaAnimando = true;
@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
             estaAnimando = false;
-        }, 1500); 
+        }, 1500);
     };
 
     window.addEventListener("wheel", (evento) => {
         if (evento.deltaY > 0) {
-            cambiarSeccion(1); 
+            cambiarSeccion(1);
         } else if (evento.deltaY < 0) {
-            cambiarSeccion(-1); 
+            cambiarSeccion(-1);
         }
     });
 
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cancelar el scroll normal físico
     window.addEventListener("touchmove", (evento) => {
-        evento.preventDefault(); 
+        evento.preventDefault();
     }, { passive: false });
 
     window.addEventListener("touchend", (evento) => {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: false });
 
     const procesarDeslizamiento = () => {
-        const limiteDeslizamiento = 50; 
+        const limiteDeslizamiento = 50;
         const diferenciaY = tactoInicioY - tactoFinY;
 
         if (diferenciaY > limiteDeslizamiento) {
