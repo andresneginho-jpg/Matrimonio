@@ -7,7 +7,7 @@
     <title>Laura & Andrés - Nuestra Boda</title>
     <!-- Fuentes de texto -->
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <!-- Íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,6 +25,9 @@
                 <h2 class="pre-titulo">¡Nos Casamos!</h2><br>
                 <h1 class="nombres">Laura<br>&amp;<br>Andrés</h1>
             </div>
+            <div class="indicador-scroll">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
         </section>
 
         <!-- Sección 2 -->
@@ -40,41 +43,55 @@
                     Queremos que estés ahí para celebrar, brindar, bailar y atesorar nuevos recuerdos juntos.
                 </p>
             </div>
+            <div class="indicador-scroll">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
         </section>
 
         <!-- Sección 3 -->
         <section class="seccion-boda seccion-3">
             <div class="capa-fondo"></div>
             <div class="capa-oscura"></div>
-            <div class="contenido">
-                <h2 class="titulo-seccion">Datos del Evento</h2>
-                <div class="detalles-evento">
-                    <div class="detalle-item">
-                        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-                        <p>22 de Agosto</p>
+            <div class="contenido contenido-evento">
+                <!-- Bloque Fecha -->
+                <div class="bloque-info">
+                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                    <div class="fecha-wrapper">
+                        <div class="fecha-lado">
+                            <div class="linea"></div>
+                            <span>SÁBADO</span>
+                            <div class="linea"></div>
+                        </div>
+                        <div class="fecha-centro">
+                            <span class="numero-dia">22</span>
+                        </div>
+                        <div class="fecha-lado">
+                            <div class="linea"></div>
+                            <span>AGOSTO</span>
+                            <div class="linea"></div>
+                        </div>
                     </div>
-                    <div class="detalle-item">
-                        <i class="fa-regular fa-clock" aria-hidden="true"></i>
-                        <p>4:00 PM</p>
-                    </div>
-                    <div class="detalle-item">
-                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                        <p>Finca Villa Alejandra<br>Vereda Cune</p>
-                    </div>
+                    <div class="fecha-ano">2026</div>
+                </div>
+
+                <!-- Bloque Ceremonia -->
+                <div class="bloque-info">
+                    <i class="fa-solid fa-ring" aria-hidden="true"></i>
+                    <p class="ceremonia-texto">Ceremonia</p>
+                    <p class="ceremonia-hora">3:00 PM</p>
+                </div>
+
+                <!-- Bloque Ubicación -->
+                <div class="bloque-info">
+                    <h2 class="ubicacion-titulo">Ubicación</h2>
+                    <p class="ubicacion-texto">Finca Villa Alejandra<br>Vereda Cune</p>
+                    <a href="https://maps.app.goo.gl/RMP6y72fgy4Xiw7g8" target="_blank" class="boton boton-mapa">
+                        VER MAPA
+                    </a>
                 </div>
             </div>
-        </section>
-
-        <!-- Sección 4 -->
-        <section class="seccion-boda seccion-4">
-            <div class="capa-fondo"></div>
-            <div class="capa-oscura"></div>
-            <div class="contenido">
-                <h2 class="titulo-seccion">Ubicación</h2>
-                <p class="texto-mapa">Te esperamos<br>para celebrar juntos<br>este gran día.</p><br>
-                <a href="https://maps.app.goo.gl/RMP6y72fgy4Xiw7g8" target="_blank" class="boton">
-                    <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Ver Mapa
-                </a>
+            <div class="indicador-scroll">
+                <i class="fa-solid fa-chevron-down"></i>
             </div>
         </section>
 
@@ -91,14 +108,20 @@
                         <p><strong>Vestimenta</strong><br>Formal</p>
                     </div>
                     <div class="item-info">
+                        <i class="fa-solid fa-music" aria-hidden="true"></i>
+                        <p><strong>Noche de Rumba</strong><br>¡A bailar y celebrar!</p>
+                    </div>
+                    <div class="item-info">
                         <i class="fa-solid fa-children" aria-hidden="true"></i>
-                        <p><strong>Solo Adultos</strong><br>Agradecemos tu comprensión, nuestra celebración será sin
+                        <p><strong>Solo Adultos</strong><br>Agradecemos tu comprensión,<br>nuestra celebración será sin
                             niños.</p>
                     </div>
                 </div>
 
-                <p class="texto-confirmacion">Por favor, confirma tu asistencia para organizar todos los detalles.</p>
-                <a href="#" class="boton boton-confirmar">
+                <p class="texto-confirmacion">Por favor, confirma tu asistencia<br>para organizar todos los detalles.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfP0hgAVAA84TOCpBgNQ7P0SXf2w3DBu9sb9qfOpFUly_8rAA/viewform?usp=publish-editor"
+                    target="_blank" class="boton boton-confirmar">
                     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Confirmar Asistencia
                 </a>
             </div>
