@@ -105,19 +105,23 @@ body {
 
 /* Fotos de fondo locales en carpeta raiz */
 .seccion-1 .capa-fondo {
-    background-image: url('seccion-1.jpg');
+    background-image: url('LA-15.png');
+}
+
+.seccion-2 {
+    font-family: 'Courgette', cursive;
 }
 
 .seccion-2 .capa-fondo {
-    background-image: url('seccion-2.jpg');
+    background-image: url('LA-11.png');
 }
 
 .seccion-3 .capa-fondo {
-    background-image: url('seccion-3.jpg');
+    background-image: url('LA-16.png');
 }
 
 .seccion-5 .capa-fondo {
-    background-image: url('seccion-5.jpg');
+    background-image: url('LA-12.png');
 }
 
 .pre-titulo {
