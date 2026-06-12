@@ -310,6 +310,59 @@ body {
     font-size: 0.9rem;
 }
 
+.bloque-regalo {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.bloque-regalo i {
+    margin-bottom: 0 !important;
+    font-size: 2rem !important;
+}
+
+.regalo-texto {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 480px), (max-height: 700px) {
+    .contenido-evento {
+        gap: 1.5rem;
+    }
+    .bloque-info i {
+        font-size: 2rem;
+    }
+    .fecha-centro .numero-dia {
+        font-size: 4rem;
+    }
+    .fecha-lado span {
+        font-size: 1rem;
+    }
+    .fecha-lado {
+        width: 80px;
+    }
+    .ceremonia-hora {
+        font-size: 1.6rem;
+    }
+    .ubicacion-titulo {
+        font-size: 1.6rem;
+    }
+    .ubicacion-texto {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    .bloque-regalo i {
+        font-size: 1.8rem !important;
+    }
+    .regalo-texto {
+        font-size: 1.1rem;
+    }
+}
+
 .indicador-scroll {
     position: absolute;
     bottom: 40px;
